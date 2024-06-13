@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Register</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="img/iconos.png" type="icono"> <!--Este es el icono-->
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrarse</button>
+                </div>
+            </div>
+
+            <!--Formulario de Login y registro-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form method="POST" action="usuario_login.php" class="formulario__login">
+                    <h2>Iniciar Sesión</h2>
+                    <label for="fechaNacimiento">Correo electronico:</label>
+                    <input type="email" id="correo" name="txtcorreo" placeholder="Correo electronico"
+                        onchange="validarCorreo()" required>
+                    <br>
+                    <br>
+                    <label for="fechaNacimiento">Contraseña:</label>
+                    <input type="password" name="txtpassword" placeholder="Contraseña" id="contrasena"
+                        onchange="validarContrasena()" required>
+                    <button type="submit" name="btn-login">Iniciar sesion</button>
+                    <br>
+                    <br>
+                    <p>¿Olvidate tu contraseña? <a href="recuperarCuenta.html">Recuperar</a> </p>
+                </form>
+
+                <!--Register-->
+                <form method="POST" action="registro.php" class="formulario__register" id="register">
+                    <h2>Regístrarse</h2>
+
+                    <label>Nombre completo:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo"
+                        onchange="validarNombre()" required>
+                    <br><br>
+                    <label>Correo electronico:</label>
+                    <input type="email" name="correo" placeholder="Correo electronico" id="correo1"
+                        onchange="validarCorreo1()" required>
+                    <br><br>
+                    <label>Fecha de Nacimiento:</label>
+                    <input type="date" name="fecha" required>
+                    <br><br>
+                    <label>Genero:</label>
+                    <br>
+                    <select id="genero" name="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label>Contraseña:</label>
+                    <input type="password" name="contrasena" placeholder="Contraseña" id="contrasena1"
+                        onchange="validarContrasena1()" required>
+                    <button type="submit" name="btn-registro">Registrarse</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="scriptLoginRegister.js"></script>
+
+    <script>
+        function validarCorreo() {
+            var correo = document.getElementById('correo').value;
+            var expresionRegular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!expresionRegular.test(correo)) {
+                alert('Correo electrónico no válido. Por favor, ingrese un correo válido.');
+                correo.focus();
+            }
+        }
+
+        function validarContrasena() {
+            var contrasena = document.getElementById('contrasena').value;
+            var expresionRegular = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+
+            if (!expresionRegular.test(contrasena)) {
+                alert('Contraseña no válida. Debe contener entre 8 y 15 caracteres, letras, números y un carácter especial (@$!%*?&).');
+            }
+        }
+
+        function validarNombre() {
+            var nombre = document.getElementById('nombre').value;
+            var expresionRegular = /^[A-Z][a-z]+ [A-Z][a-z]+/;
+
+            if (!expresionRegular.test(nombre)) {
+                alert('Nombre no válido. No se aceptan numero y debe ser completo');
+            }
+        }
+
+        function validarCorreo1() {
+            var correo = document.getElementById('correo1').value;
+            var expresionRegular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!expresionRegular.test(correo)) {
+                alert('Correo electrónico no válido. Por favor, ingrese un correo válido.');
+
+            }
+        }
+
+        function validarContrasena1() {
+            var contrasena = document.getElementById('contrasena1').value;
+            var expresionRegular = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+
+            if (!expresionRegular.test(contrasena)) {
+                alert('Contraseña no válida. Debe contener entre 8 y 15 caracteres, letras, números y un carácter especial (@$!%*?&).');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

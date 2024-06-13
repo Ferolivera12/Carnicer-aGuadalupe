@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="estilorecuperar.css" type="text/css" />
+    <title>Actualizar Contraseña</title>
+    <link rel="shortcut icon" href="iconos.png" type="icono"> <!--Este es el icono-->
+</head>
+
+<body>
+    <section>
+        <div class="contenedor">
+            <div class="formulario">
+                <form action="actualizar_contraseña.php" method="post">
+                    <h1>Actualizar Contraseña</h1>
+                    <br><br>
+                    <label for="#">Nueva Contraseña</label>
+                    <div class="input-contenedor">
+                        <input type="password" placeholder="Contraseña" name="password" id="contrasena" onBlur="validarContrasena()" required>
+                        <input type="hidden" name="email" value="<?php echo htmlspecialchars($_GET['email']); ?>">
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+                
+                <button type="submit">Actualizar</button>        
+            </form>        
+            </div>
+        </div>
+    </section>
+    <script src="scriptContraseña.js"></script>
+</body>
+
+</html>

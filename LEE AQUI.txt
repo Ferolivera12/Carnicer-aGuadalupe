@@ -1,0 +1,13 @@
+Se adjunta el codigo del proyecto junto con su base de datos
+user = 'root', pass = '' y db = 'carnes';
+primero se agrega el proyecto en xampp en la carpeta htdocs y agregan la carpeta carniceria
+luego en phpMyAdmin importan la BD llamada carnes solo tiene una tabla "empleado"
+luego la conexion esta en "conexion_be.php"
+ $host = '127.0.0.1:33062';
+    $user = 'root';
+    $pass = '';
+    $db = 'carnes';
+para ingresar al login dan clic en el archivo "log_reg.php"
+con nombre Saul contraseña= saul1238
+para ingresar como administrador
+nombre= Yesenia  contraseña= root12345

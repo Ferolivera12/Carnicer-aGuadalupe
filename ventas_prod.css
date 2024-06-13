@@ -1,0 +1,9 @@
+#productos{
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+#totalVenta{
+    font-weight: bold;
+    font-size: 15px;
+}

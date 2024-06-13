@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="estilorecuperar.css" type="text/css" />
+    <link rel="shortcut icon" href="img/iconos.png" type="icono"> <!--Este es el icono-->
+    <title>Recuperar Cuenta</title>
+    <link rel="shortcut icon" href="iconos.png" type="icono"> <!--Este es el icono-->
+</head>
+
+<body>
+    <section>
+        <div class="contenedor">
+            <div class="formulario">
+                <form method="post" action="buscar_correo.php">
+                    <h1>Recuperar Contraseña</h1>
+                    <br><br>
+                    <label for="#">Email</label>
+                    <div class="input-contenedor">
+                        <input type="email" placeholder="Correo electronico" name="email" id="correo" onBlur="validarCorreo()" required>
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+               
+                <button type="submit">Recuperar cuenta</button>
+            </form>
+                <div class="iniciarSesion">
+                    <p>¿Ya tienes una cuenta? <a href="log_reg.html">Iniciar Sesión</a> </p>
+                    <p>¿Aún no tienes una cuenta? <a href="log_reg.html">Registrarme</a> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="scriptCuenta.js"></script>
+</body>
+
+</html>

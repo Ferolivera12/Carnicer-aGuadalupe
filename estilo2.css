@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+ 
+body{
+    background-image: url("carn.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 40px;
+    margin: auto;
+    margin-top: 110px;
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+}
+
+.caja__trasera{ /*Parte trasera*/
+    width: 85%;
+    padding: 150px 30px;
+    display:flexbox;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    background-color: #F87D0A;
+    border-radius: 15px;
+}
+
+.caja__trasera img.logo {
+    position: absolute;
+    right: 70px; /* Ajusta la posición izquierda según lo necesites */
+    top: 60px; /* Ajusta la posición superior según lo necesites */
+    width: 200px; /* Ajusta el ancho según lo necesites */
+    height: 150px; /* Para mantener la proporción de aspecto */
+    animation: aparecer-desaparecer 25s infinite;
+  }
+
+/*
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p{
+    font-size: 16px;
+    font-weight: 300;
+}
+*/
+.caja__trasera button{
+    padding: 100px 80px;
+    border: 2px solid #fff; /*Color del borde del boton*/
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+    background: #fff;
+    color: #581845;
+}
+
+#titulo{
+    color: black;
+    margin-top: 10px; /* Ajusta la distancia desde arriba */
+    margin-bottom: 25px; /* Ajusta la distancia desde abajo */
+    font-size: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6); 
+    max-width: 680px;
+
+}
+
+
+
+/*Formularios*/
+
+.contenedor__login-register{ /*Direccion del cuadro del login*/
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position:inherit;
+    top:-312px;
+    left: -10px;
+    height: 90%;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+    width: 100%;
+    padding: 50px 20px;
+    background: white;
+    position: center;
+    border-radius: 20px;
+}
+
+.contenedor__login-register form h2{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #581845; 
+}
+
+
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 12px;
+    outline: none;
+}
+.contenedor__login-register form label{
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: black;  
+    font-size: 14px;
+}
+
+.contenedor__login-register form #genero{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 12px;
+    outline: none;
+}
+
+.contenedor__login-register form button{
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    font-size: 14px;
+    background:  #F87D0A; 
+    color: #272002; /*Boton de iniciar sesion o registrar*/
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+
+
+.formulario__login{
+    opacity: 1;
+    display:block;
+}
+.formulario__register{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute; 
+    } 
+    
+    .caja__trasera img.logo {
+        position: absolute;
+        left: 40px; /* Ajusta la posición izquierda según lo necesites */
+        top: -140px; /* Ajusta la posición superior según lo necesites */
+        width: 200px; /* Ajusta el ancho según lo necesites */
+        height: 150px; /* Para mantener la proporción de aspecto */
+      }
+
+    /*Formularios*/
+
+    .contenedor__login-register{
+        top: -100px;
+        left: -2px;
+        margin: auto;
+    }
+
+   
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+}

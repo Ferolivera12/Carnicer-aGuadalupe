@@ -1,0 +1,71 @@
+body {
+  background-color: #f5f2f0; /* Light beige background */
+}
+
+.Opciones,
+.form-group {
+  margin-bottom: 15px;
+}
+
+.Opciones a {
+  color: #f08030; /* Dark orange for links */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.Opciones a:hover {
+  background-color: #f08030; /* Dark orange on hover */
+  color: white;
+}
+
+.btn-primary,
+#btnExportar {
+  background-color: #f08030; /* Dark orange for buttons */
+  border-color: #f08030;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover,
+#btnExportar:hover {
+  background-color: #d96b27; /* Even darker orange on hover */
+  border-color: #d96b27;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto; /* Center the table */
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  text-align: left;
+  background-color: #f08030; /* Dark orange for table header */
+  color: white;
+}
+
+#btnExportar {
+  margin-top: 15px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto; /* Center the logo */
+  width: 200px; /* Adjust width as needed */
+  height: auto;
+}
+.form-group input[type="date"] {
+  padding: 10px; /* Increase padding for better spacing */
+  border: 2px solid #ffb300; /* Light border */
+  width: 40%; /* Make input field fill the container */
+}

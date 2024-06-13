@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Alias</title>
+<script>
+function Alias() {
+    var nombre = document.getElementById("nombre").value.trim();
+    var apellidoPaterno = document.getElementById("apellidoPaterno").value.trim();
+    var contraseña = document.getElementById("contraseña").value.trim();
+
+    // Concatenar los valores y realizar alguna transformación, como mayúsculas o minúsculas
+    var alias = nombre.substr(0, 4) + apellidoPaterno.substr(0, 3) + contraseña.substr(0, 3);
+
+    // Mostrar el alias generado en un elemento HTML
+    document.getElementById("alias").innerHTML = alias;
+
+    
+}
+</script>
+</head>
+<body>
+
+<h2>Generador de Alias</h2>
+
+<form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="apellidoPaterno">Apellido Paterno:</label>
+    <input type="text" id="apellidoPaterno" name="apellidoPaterno" required><br><br>
+
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña" onblur="Alias()" name="contraseña" required><br><br>
+
+    <span type="text" id="alias" readonly></span>
+</form>
+
+</body>
+</html>
